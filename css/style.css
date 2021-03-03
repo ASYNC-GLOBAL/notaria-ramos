@@ -1,0 +1,965 @@
+:root {
+    --color-primario: #00a0c0;
+    --color-primario-oscuro: #004F81;
+    --color-secundario: #0083c5;
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.br-100 {
+    border-radius: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.btn-not1 {
+    font-size: 0.9rem;
+    padding: 13px 33px;
+    border: 2.5px solid var(--color-primario);
+    transition: all 0.4s;
+}
+
+.btn-not2 {
+    font-size: 0.9rem;
+    padding: 13px 33px;
+    background-color: var(--color-primario);
+    transition: all 0.4s;
+    color: white;
+}
+
+.btn-not1:hover {
+    background-color: var(--color-primario-oscuro);
+    border: 2.5px solid var(--color-primario-oscuro);
+    color: white;
+}
+
+.btn-not2:hover {
+    background-color: var(--color-primario-oscuro);
+    color: white;
+}
+
+.linea-decor {
+    width: 120px;
+    margin-top: 20px;
+}
+
+
+/************ HEADER INFO ************/
+
+#header-info-div {
+    background-color: #2a3036;
+}
+
+#header-info-content {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#header-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-info-navbar {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.header-info-navbar li {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 0.95rem;
+    color: white;
+}
+
+.header-info-navbar li span {
+    font-weight: bold;
+}
+
+.header-social-navbar {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.header-social-navbar li {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.header-social-navbar li a {
+    font-size: 1rem;
+    color: white;
+}
+
+.header-social-navbar li a:hover {
+    color: var(--color-primario);
+}
+
+
+/******** HEADER **********/
+
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.headercolor {
+    background-color: white;
+    box-shadow: 0 1px 8px rgb(25 25 25 / 45%);
+}
+
+.headercolor .a-link {
+    color: var(--color-primario-oscuro);
+}
+
+.navbar {
+    height: 80px;
+}
+
+.logo-img {
+    height: 70px;
+    padding: 0;
+}
+
+.logo-img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar-toggler {
+    border-color: var(--color-primario-oscuro) !important;
+}
+
+.movil-titulo-menu {
+    display: none;
+}
+
+.a-link {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+}
+
+.a-link-drop {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-primario-oscuro);
+}
+
+.a-link-drop:hover {
+    color: var(--color-primario);
+}
+
+.link-active {
+    color: var(--color-primario) !important;
+}
+
+.a-link:hover {
+    color: var(--color-primario);
+}
+
+
+/******** SWIPER GENERAL *******/
+
+.swiper-button-prev,
+.swiper-button-next {
+    --swiper-theme-color: var(--color-primario);
+    width: 50px;
+    height: 50px;
+    padding: 25px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.123);
+    font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 25px;
+}
+
+.swiper-button-prev {
+    left: 70px;
+}
+
+.swiper-button-next {
+    right: 70px;
+}
+
+
+/********* MASK ********/
+
+#mask-container {
+    height: calc(112vh - 50px);
+    min-height: 545px;
+    max-height: 850px;
+    position: relative;
+    margin-top: -80px;
+    background-color: #42474C;
+}
+
+#mask-swiper-container {
+    height: 100%;
+}
+
+.mask-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 0 95%, 50% 100%, 100% 95%, 100% 0);
+}
+
+#mask-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: fit-content;
+    width: 65%;
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    /* background-color: aquamarine; */
+}
+
+#mask-info h2 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+#mask-info h1 {
+    color: var(--color-primario-oscuro);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mask-info-titulo {
+    font-size: 3.8rem;
+}
+
+#mask-info p {
+    padding: 5px 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#mask-info span {
+    color: var(--color-primario-oscuro);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+#mask-info p .button-mask-div {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.titulo-renovamos {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    /* color: #7FCCF7; */
+}
+
+.btn-mask {
+    font-size: 0.9rem;
+    padding: 15px 45px;
+    color: white;
+    background-color: var(--color-primario);
+    transition: all 0.4s;
+}
+
+.btn-mask:hover {
+    background-color: var(--color-primario-oscuro);
+    color: white;
+    box-shadow: 1px 1px 4px var(--color-primario);
+}
+
+
+/********* NOTARIA INFO *************/
+
+#notaria-info-div {
+    padding: 5px 0;
+    background-color: #42474C;
+}
+
+#notaria-info-content {
+    margin-top: 80px;
+    margin-bottom: 180px;
+    padding: 10px 0;
+}
+
+#notaria-present span {
+    font-size: 0.9rem;
+    color: var(--color-primario);
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+#notaria-present h1 {
+    margin-top: 12px;
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+#notaria-present .linea-decor {
+    border-top: 1px solid var(--color-primario);
+}
+
+#notaria-nombre {
+    margin-top: 22px;
+    width: 80%;
+    max-width: 600px;
+}
+
+#notaria-nombre img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#notaria-info {
+    font-size: 1rem;
+    color: white;
+}
+
+.notaria-info-parraf {
+    opacity: 0;
+    transition: all 2s;
+}
+
+#notaria-info p:first-child::first-letter {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-family: 'Prata';
+    float: left;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#btn-notaria-div a {
+    color: white;
+}
+
+
+/********* ATRIBUTOS DIV*****************/
+
+#atributos-div {
+    padding-top: 60px;
+    padding-bottom: 200px;
+    background-color: #F8F8F8;
+    width: 100%;
+}
+
+#atributo-container {
+    position: relative;
+    width: 100%;
+}
+
+#atributo-content {
+    width: 100%;
+    position: absolute;
+    top: -190px;
+}
+
+#atributo-list {
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.atributo {
+    padding: 32px 45px;
+}
+
+.atributo h1 {
+    font-size: 4rem;
+}
+
+.atributo h2 {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.atributo p {
+    margin-top: 12px;
+    font-size: 0.95rem;
+}
+
+.atributo1 {
+    background-color: var(--color-primario);
+}
+
+.atributo2 {
+    background-color: white;
+}
+
+.atributo2:nth-child(2) {
+    border-right: 1px solid rgba(119, 119, 119, 0.521);
+    /* background-color: #111111 !important; */
+}
+
+.atributo1 h1,
+.atributo1 h2,
+.atributo1 p {
+    color: white;
+}
+
+.atributo1 .linea-decor {
+    border-top: 1px solid white;
+}
+
+.atributo2 h1 {
+    color: var(--color-primario);
+}
+
+.atributo2 h2,
+.atributo2 p {
+    color: black;
+}
+
+.atributo2 .linea-decor {
+    border-top: 1px solid var(--color-primario);
+}
+
+
+/************** OFICINA VIRTUAL*****************/
+
+#oficina-div {
+    padding: 5px;
+}
+
+#oficina-content {
+    margin: 40px 0;
+    padding: 15px 0;
+}
+
+#oficina-info h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#oficina-info p {
+    margin-top: 15px;
+}
+
+#oficina-div-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+#oficina-div-button a {
+    margin: 10px 0;
+}
+
+#oficina-img-div {
+    display: flex;
+    justify-content: center;
+}
+
+#oficina-img {
+    width: 85%;
+    height: 100%;
+}
+
+#oficina-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/**** OFICINA SWIPER  *******/
+
+#swiper-oficina-container {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+#swiper-oficina-content {
+    margin: 5px 0 40px 0;
+    position: relative;
+    padding: 8px 0;
+}
+
+#oficina-swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-pagination-bullets {
+    width: 100%;
+    bottom: -1.3rem;
+}
+
+.swiper-pagination-bullet {
+    margin: 0 0.7rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    --swiper-theme-color: var(--color-primario);
+    opacity: 0.7;
+}
+
+.card {
+    width: 31.5%;
+    min-height: 110px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+}
+
+.card-title {
+    font-size: 1.22rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.93rem;
+}
+
+
+/*********** SERVICIOS ADD ***********/
+
+#servicios-add-div {
+    padding-top: 10px;
+}
+
+.servicio-add {
+    text-align: center;
+    padding: 42px 15px;
+}
+
+.servicio-add h1 {
+    font-size: 2.6rem;
+    letter-spacing: 4px;
+    color: var(--color-primario);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.servicio-add h2 {
+    font-size: 2.1rem;
+    color: white;
+    font-weight: 600;
+}
+
+.servicio-add h3 {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-servicio-add-div {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+#serv-empresa {
+    background-image: url(../assets/img/servicio-add/servicio-add1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#serv-testamento {
+    background-image: url(../assets/img/servicio-add/servicio-add2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#serv-linea {
+    background-image: url(../assets/img/servicio-add/servicio-add3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-servicio-add-div a {
+    color: white;
+}
+
+
+/********** FOOTER **********/
+
+footer {
+    background-color: #1f1f1f;
+    padding: 20px 0 5px 0;
+}
+
+#footer-menu {
+    padding: 50px 10px;
+}
+
+#logo-footer {
+    height: 70px;
+}
+
+#logo-footer img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#footer-menu h1 {
+    font-size: 1.02rem;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-list-menu {
+    padding-left: 8px;
+    margin-top: 10px;
+}
+
+.footer-list-menu li {
+    margin-top: 12px;
+}
+
+.footer-list-menu,
+.footer-list-menu li a {
+    color: #dde1eb;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.92rem;
+}
+
+.footer-list-menu li a:hover {
+    color: var(--color-primario) !important;
+}
+
+.footer-tarjetas-img {
+    height: 70px;
+}
+
+.footer-tarjetas-img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#footer-li-social {
+    margin-top: 18px;
+}
+
+#footer-li-social a {
+    margin-right: 20px;
+    font-size: 1rem;
+}
+
+.footer-contacto li i {
+    color: var(--color-primario);
+}
+
+#footer-copy {
+    border-top: 1px solid rgb(133, 133, 133);
+}
+
+#footer-copy h1 {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+#footer-copy h1,
+#footer-copy h1 a {
+    color: var(--color-primario);
+}
+
+#footer-copy h1 a:hover {
+    color: white;
+}
+
+@media (max-width:991px) {
+    /*********** HEADER INFO *************/
+    #header-info-div {
+        display: none;
+    }
+    /******** HEADER ********/
+    #header {
+        padding: 0;
+    }
+    header,
+    .navbar {
+        background-color: white;
+        box-shadow: 0 1px 8px rgb(25 25 25 / 45%);
+    }
+    #header-cont-f {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar {
+        padding: 10px 0;
+        min-height: 80px;
+        height: auto;
+    }
+    .navbar-collapse {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding: 10px;
+    }
+    .logo-img {
+        display: block;
+        height: 60px;
+        margin-left: 18px;
+    }
+    .navbar-toggler {
+        margin-right: 18px;
+    }
+    .navbar-nav {
+        padding-left: 0;
+        margin: 20px 0;
+    }
+    .movil-titulo-menu {
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+        color: var(--color-primario-oscuro);
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .navbar-nav li {
+        display: block;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .a-link {
+        justify-content: center;
+        font-size: 1.1rem;
+        padding-left: 0;
+        padding-right: 0;
+        color: var(--color-primario-oscuro);
+    }
+    /******** SWIPPER *********/
+    .swiper-button-prev {
+        left: 5px;
+    }
+    .swiper-button-next {
+        right: 5px;
+    }
+    /******* MASK *******/
+    #mask-container {
+        height: calc(100vh - 80px);
+        min-height: 400px;
+        max-height: 520px;
+        margin-top: 0px;
+    }
+    .mask-img {
+        object-position: center;
+    }
+    #mask-info {
+        width: 74%;
+        max-width: 500px;
+    }
+    #mask-info span {
+        font-size: 1rem;
+    }
+    #mask-info h1 {
+        font-size: 2.6rem;
+    }
+    #mask-info p {
+        padding: 5px 20px;
+    }
+    .titulo-renovamos {
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+    }
+    .button-mask-div {
+        padding: 10px 0;
+    }
+    .btn-mask {
+        padding: 15px 25px;
+    }
+    /******** NOTARIA INFO ***********/
+    #notaria-info-content {
+        margin-top: 50px;
+    }
+    #notaria-info {
+        margin-top: 20px;
+    }
+    /********* ATRIBUTOS DIV*****************/
+    #atributos-div {
+        padding-top: 60px;
+        padding-bottom: 30px;
+        background-color: #e7e7e7;
+    }
+    #atributo-container {
+        width: 100%;
+        position: relative;
+        margin-top: -190px;
+    }
+    #atributo-content {
+        position: relative;
+        top: 0;
+    }
+    .atributo2:nth-child(2) {
+        border-right: none;
+        border-bottom: 1px solid rgba(119, 119, 119, 0.521);
+        /* background-color: #111111 !important; */
+    }
+    /********* OFICINA VIRTUAL ************/
+    #oficina-info h1 {
+        font-size: 2rem;
+    }
+    #oficina-img-div {
+        margin-top: 20px;
+    }
+    #oficina-img {
+        width: 100%;
+    }
+    #oficina-content {
+        margin-bottom: 20px;
+    }
+    #oficina-div-button a {
+        margin: 10px auto;
+    }
+    /***********OFICINA SWIPER **********/
+    #swiper-usuario-container {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    #oficina-swiper-container {
+        width: 90%;
+    }
+    .card {
+        width: 95%;
+        min-height: 120px;
+        /* background-color: #58f16c; */
+    }
+    .card-img {
+        height: 250px;
+    }
+    .swiper-button-prev {
+        left: 0px;
+    }
+    .swiper-button-next {
+        right: 0px;
+    }
+    /********* SERVICIO ADD ***********/
+    .servicio-add h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    .servicio-add h2 {
+        font-size: 1.8rem;
+    }
+    .servicio-add h3 {
+        font-size: 1.6rem;
+    }
+    #serv-empresa {
+        background-image: url(../assets/img/servicio-add/servicio-add1-movil.jpg);
+    }
+    #serv-testamento {
+        background-image: url(../assets/img/servicio-add/servicio-add2-movil.jpg);
+    }
+    /******* FOOTER *******/
+    #footer-menu h1 {
+        font-size: 1.12rem;
+        margin-top: 10px;
+    }
+    .footer-list-menu li {
+        font-size: 1rem;
+    }
+    #footer-copy h1 {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:365px) {
+    /********* MASK *********/
+    .titulo-renovamos {
+        font-size: 2.6rem;
+        letter-spacing: 0px;
+    }
+    /********* SERVICIO ADD ***********/
+    .servicio-add h1 {
+        font-size: 2rem;
+        letter-spacing: 0px;
+    }
+}
+
+
+/********** ANIMATION *********/
+
+.slide {
+    animation: slide 0.6s ease both;
+}
+
+.slide-scale {
+    animation: slide-scale 0.8s ease both;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-scale {
+    0% {
+        transform: translateY(60px) scale(0.5);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
